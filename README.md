@@ -25,4 +25,5 @@ finally build a nav bar that does two things: display the pokemons name on the l
 the right side which allows a user to input an integer and upon clicking the button calls the api, using the input as the
 {integer} and updates the store, which should then update the name of the pokemon and each route's component. 
 
-
+This shouldn't be too crazy, use create-react-app, react-router, mobx, axios, and any other technology you're familiar with. 
+I use oxford commas, buzz off...
