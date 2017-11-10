@@ -35,13 +35,19 @@ export default class PokemonStore {
       //debugger;
       //console.log(this.pokemon);
     });
+    
     this.getPokemon = this.getPokemon.bind(this);
   }
 
   fetchPokemon(idNum) { //idNum was supposed to be sent as a prop on the navbar's button ??
-    console.log(idNum)
+    
     axios.get('https://pokeapi.co/api/v2/pokemon/' + idNum).then((res) =>{
-      this.pokemon = res.data
+      //this.pokemon = res.data
+      var pokemonObj = { 
+        name: res.data.name,
+        moves: res.data.moves[0].move.name
+        }
+      axios.post('/addPokemon', pokemonObj);
     });
   }
 

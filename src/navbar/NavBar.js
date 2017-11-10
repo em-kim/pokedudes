@@ -26,6 +26,7 @@ var NavBar = observer(class Stats extends Component {
     var int = this.state.pokemonNum //how do I get the value from the handleInput into handleClick?
     console.log(int)
     this.props.pokemonStore.fetchPokemon(int) //this is how to get 'int' over to the fetchPokemon() in the store.  I tried to send it as an attribute in the button..to no avail.
+  
   }
 
 
